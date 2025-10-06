@@ -1,0 +1,383 @@
+body {
+  background-color: #0d0d0d;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 15px 30px;
+  border-bottom: 1px solid #333;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* smaller gap between logo and buttons */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0,5px; /* gap between search, auth buttons, and hamburger */
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-buttons button,
+.auth-buttons .auth {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 5px; /* reduce space between buttons */
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 5px;          /* space between Login and Sign Up */
+  margin-left: -10px;  /* shift the whole block slightly left */
+}
+
+.nav-buttons button:hover,
+.auth-buttons .auth:hover {
+  color: #ffcc00;
+}
+
+.search-bar {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #121212;
+  color: white;
+  width: 200px;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  position: absolute;
+  right: 180px;
+  top: 50%;
+  transform: translateY(-1345%);
+  background: #1a1a1a;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 22px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100%;
+  background-color: #111;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.7);
+  padding: 15px 0;
+  overflow-y: auto;
+  transition: right 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.sidebar.open {
+  right: 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.sidebar-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.sidebar-item:hover {
+  background-color: #222;
+}
+
+.sidebar-divider {
+  border: none;
+  height: 1px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+/* Dropdown */
+.sidebar-dropdown .sub-items {
+  margin-left: 15px;
+  border-left: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.sidebar-subitem {
+  padding: 8px 15px;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
+.sidebar-subitem:hover {
+  color: #fff;
+}
+
+/* Arrow for dropdown */
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.arrow.open {
+  transform: rotate(90deg);
+}
+
+/* TRENDING BAR */
+.trending-bar {
+  background-color: #141414;
+  border-bottom: 1px solid #333;
+  padding: 8px 30px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.trending-filters {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.trending-item {
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #2a2a2a;
+  transition: background 0.2s;
+}
+
+.trending-item:hover {
+  background-color: #ffcc00;
+  color: #111;
+}
+
+/* CONTENT LAYOUT */
+.content-container {
+  display: flex;
+  padding: 20px 30px;
+}
+
+/* DAILY NEWS LEFT COLUMN */
+.daily-news {
+  width: 25%;
+  border-right: 1px solid #333;
+  padding-right: 20px;
+}
+
+.daily-item {
+  margin-bottom: 20px;
+}
+
+.daily-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.daily-item p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+/* MAIN ARTICLES SECTION */
+.articles-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-left: 20px;
+}
+
+.article {
+  display: flex;
+  align-items: flex-start;
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #222;
+}
+
+.article img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 8px;
+}
+
+.article h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.article p {
+  color: #ccc;
+}
+
+/* Overlay fade when sidebar open */
+.overlay {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 15;
+}
+
+/* Close button outside sidebar next to Home */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: -35px; 
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* SidebarDropdown arrows pointing left */
+.arrow-left {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.arrow-left.open {
+  transform: rotate(90deg);
+}
+
+/* Trending bar */
+.trending-bar {
+  background-color: #141414;
+  border-bottom: 1px solid #333;
+  padding: 8px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.trending-label {
+  font-weight: bold;
+  color: #fff;
+}
+
+.trending-filters {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.trending-item {
+  background-color: #2a2a2a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.trending-item:hover {
+  background-color: #ffcc00;
+  color: #111;
+}
+
+/* HEADER - adjust spacing */
+.nav-buttons {
+  display: flex;
+  gap: 0.5px;          
+  margin-left: 30px;
+}
+
+.search-bar {
+  margin-right: 70px;
+}
+
+/* SidebarDropdown arrows pointing left initially */
+.arrow-left {
+  display: inline-block;
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+.arrow-left.open {
+  transform: rotate(90deg);
+}
+
+/* Trending bar with more trends */
+.trending-filters {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.trending-item {
+  background-color: #2a2a2a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.trending-item:hover {
+  background-color: #ffcc00;
+  color: #111;
+}
