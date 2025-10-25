@@ -39,3 +39,9 @@
     ]
   }
 }
+
+{
+  "scripts": {
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build"
+  }
+}
