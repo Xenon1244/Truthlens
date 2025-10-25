@@ -1,0 +1,146 @@
+.featured-article {
+  background: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.featured-article:hover {
+  transform: translateY(-3px);
+  border-color: #333;
+  box-shadow: 0 8px 30px rgba(255, 204, 0, 0.2);
+}
+
+.featured-article-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.featured-article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.featured-article:hover .featured-article-image img {
+  transform: scale(1.05);
+}
+
+.featured-article-content {
+  padding: 30px;
+}
+
+.featured-article-category {
+  color: #ffcc00;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.featured-article-title {
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+}
+
+.featured-article-description {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+.featured-article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+  font-size: 0.9rem;
+}
+
+.featured-article-source {
+  color: #ccc;
+}
+
+.featured-article-source strong {
+  color: #ffcc00;
+}
+
+.featured-article-date {
+  color: #888;
+}
+
+.featured-article-bias {
+  margin-bottom: 25px;
+}
+
+.featured-article-actions {
+  text-align: center;
+}
+
+.read-more-btn {
+  background: #ffcc00;
+  color: #111;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #ffd633;
+  transform: translateY(-1px);
+}
+
+.featured-article-placeholder {
+  background: #1a1a1a;
+  border: 2px dashed #333;
+  border-radius: 16px;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.placeholder-content h3 {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.placeholder-content p {
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .featured-article-image {
+    height: 200px;
+  }
+  
+  .featured-article-content {
+    padding: 20px;
+  }
+  
+  .featured-article-title {
+    font-size: 1.4rem;
+  }
+  
+  .featured-article-description {
+    font-size: 1rem;
+  }
+  
+  .featured-article-meta {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}

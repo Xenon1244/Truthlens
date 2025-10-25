@@ -1,0 +1,54 @@
+.sidebar-dropdown {
+  margin-bottom: 5px;
+}
+
+.sidebar-item {
+  padding: 14px 24px;
+  cursor: pointer;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-item:hover {
+  background: #222;
+  border-left-color: #ffcc00;
+  color: white;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.arrow.open {
+  transform: rotate(90deg);
+  color: #ffcc00;
+}
+
+.sub-items {
+  margin-left: 20px;
+  border-left: 2px solid #333;
+  transition: all 0.4s ease;
+}
+
+.sidebar-subitem {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #888;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border-left: 2px solid transparent;
+}
+
+.sidebar-subitem:hover {
+  color: #ffcc00;
+  background: #1a1a1a;
+  border-left-color: #ffcc00;
+}

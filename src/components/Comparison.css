@@ -1,0 +1,28 @@
+.comparison-selector {
+  margin: 20px 0;
+}
+
+.selector-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.selector-item {
+  padding: 15px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.selector-item:hover {
+  border-color: #007bff;
+  background-color: #f8f9fa;
+}
+
+.selector-item.selected {
+  border-color: #007bff;
+  background-color: #e7f3ff;
+}

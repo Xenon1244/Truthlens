@@ -1,0 +1,364 @@
+/* Account Information Specific Styles */
+.account-info-content {
+  width: 100%;
+}
+
+.info-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333;
+}
+
+.info-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #ccc;
+  font-size: 16px;
+  min-width: 120px;
+}
+
+.info-value {
+  color: #fff;
+  font-size: 16px;
+}
+
+.info-value-edit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.edit-btn {
+  background: transparent;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.edit-btn:hover {
+  background-color: #2a2a2a;
+  border-color: #666;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Profile Picture */
+.profile-picture-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.profile-picture {
+  font-size: 80px;
+  color: #666;
+}
+
+.change-photo-btn {
+  background: transparent;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.change-photo-btn:hover {
+  background-color: #2a2a2a;
+  border-color: #666;
+}
+
+/* Sign-in Methods */
+.signin-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.method-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #333;
+  min-height: 80px;
+}
+
+.method-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.method-icon {
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+}
+
+.method-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.method-name {
+  font-weight: 600;
+  color: #fff;
+  font-size: 16px;
+}
+
+.method-email {
+  color: #888;
+  font-size: 14px;
+}
+
+.method-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.method-status {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.method-status.connected {
+  background-color: #00a000;
+  color: #fff;
+}
+
+.method-status.not-connected {
+  background-color: #444;
+  color: #ccc;
+}
+
+.cannot-remove {
+  color: #666;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.connect-btn {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.connect-btn:hover {
+  background-color: #0052a3;
+}
+
+/* Keep all the existing styles from previous CSS */
+.groundnews-account {
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.account-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left Sidebar - 25% */
+.account-sidebar {
+  width: 25%;
+  background-color: #1a1a1a;
+  padding: 30px 20px;
+  border-right: 1px solid #333;
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.sidebar-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-item {
+  margin-bottom: 12px;
+  padding: 8px 0;
+}
+
+.item-label {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 4px;
+}
+
+.item-value {
+  font-size: 13px;
+  color: #666;
+}
+
+.sidebar-item.clickable {
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.sidebar-item.clickable:hover {
+  background-color: #2a2a2a;
+}
+
+.sidebar-item.clickable.active {
+  background-color: #0066cc;
+  color: #fff;
+}
+
+/* Right Content - 75% */
+.account-main {
+  width: 75%;
+  padding: 40px;
+  background-color: #0f0f0f;
+}
+
+.main-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.welcome-message {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.description {
+  color: #888;
+  margin-bottom: 40px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.content-sections {
+  display: flex;
+  gap: 30px;
+}
+
+.content-section {
+  flex: 1;
+  background-color: #1a1a1a;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.content-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.content-section p {
+  color: #888;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.action-btn {
+  background: transparent;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #2a2a2a;
+  border-color: #666;
+}
+
+.action-btn.primary {
+  background-color: #0066cc;
+  border-color: #0066cc;
+  color: #fff;
+}
+
+.action-btn.primary:hover {
+  background-color: #0052a3;
+  border-color: #0052a3;
+}
+
+/* Make sure no header appears */
+.groundnews-account header {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .account-layout {
+    flex-direction: column;
+  }
+  
+  .account-sidebar,
+  .account-main {
+    width: 100%;
+  }
+  
+  .content-sections {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,256 @@
+.for-you-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.personalized-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.personalized-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: white;
+}
+
+.personalized-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 15px;
+  color: #e2e8f0;
+}
+
+.bias-profile-display {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bias-info {
+  font-size: 1rem;
+  color: white;
+}
+
+.bias-info strong {
+  color: #90cdf4;
+}
+
+.bias-description {
+  opacity: 0.9;
+  font-weight: normal;
+  color: #e2e8f0;
+}
+
+.personalized-news {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.news-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.personalized-card {
+  border-left: 4px solid #2b6cb0;
+  position: relative;
+  overflow: hidden;
+}
+
+.personalized-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1a365d 0%, #2b6cb0 100%);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.bias-tag {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid;
+}
+
+.bias-progressive { 
+  background: #ebf8ff; 
+  color: #2b6cb0; 
+  border-color: #bee3f8;
+}
+.bias-conservative { 
+  background: #fff5f5; 
+  color: #c53030; 
+  border-color: #fed7d7;
+}
+.bias-centrist { 
+  background: #faf5ff; 
+  color: #6b46c1; 
+  border-color: #e9d8fd;
+}
+.bias-lean-left { 
+  background: #f0fff4; 
+  color: #276749; 
+  border-color: #c6f6d5;
+}
+.bias-lean-right { 
+  background: #fffaf0; 
+  color: #dd6b20; 
+  border-color: #feebc8;
+}
+
+.match-score {
+  background: #38a169;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.category-badge {
+  display: inline-block;
+  background: #ebf8ff;
+  color: #2b6cb0;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid #bee3f8;
+}
+
+.news-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #2d3748;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.news-card p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.source {
+  font-weight: 600;
+  color: #2b6cb0;
+  font-size: 0.9rem;
+}
+
+.timestamp {
+  color: #718096;
+  font-size: 0.8rem;
+}
+
+.personalization-note {
+  margin-top: 15px;
+  padding: 10px;
+  background: #f0fff4;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #276749;
+  text-align: center;
+  border: 1px solid #c6f6d5;
+  font-weight: 500;
+}
+
+.personalization-tips {
+  background: #f7fafc;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 40px;
+  border: 1px solid #e2e8f0;
+}
+
+.personalization-tips h3 {
+  color: #2d3748;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.personalization-tips p {
+  color: #4a5568;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.2rem;
+  color: #718096;
+}
+
+@media (max-width: 768px) {
+  .for-you-page {
+    padding: 15px;
+  }
+  
+  .personalized-news {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .personalized-header h1 {
+    font-size: 2rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}

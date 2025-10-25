@@ -1,0 +1,1704 @@
+* {
+  box-sizing: border-box;
+}
+
+.homepage {
+  background-color: #0d0d0d;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ORIGINAL 3-COLUMN LAYOUT - 25%/50%/25% */
+.content-container {
+  display: grid;
+  grid-template-columns: minmax(0, 25%) minmax(0, 50%) minmax(0, 25%);
+  gap: 30px;
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Left Column */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-header {
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  color: #ffcc00;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.stories-count {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.left-article {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #222;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.left-article:hover {
+  transform: translateY(-2px);
+  border-color: #333;
+}
+
+.left-article h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.left-article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.left-bias-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sources-count {
+  background: #2a2a2a;
+  padding: 4px 8px;
+  border-radius: 10px;
+  color: #ccc;
+}
+
+.date-badge {
+  background: #2a2a2a;
+  color: #ffcc00;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.daily-briefing-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.daily-briefing-article {
+  display: flex;
+  align-items: center;
+  background: #191919;
+  border-radius: 14px;
+  padding: 12px 15px;
+  border: 1px solid #2a2a2a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.daily-briefing-article:hover {
+  transform: translateY(-2px);
+  border-color: #ffcc00;
+}
+
+.daily-briefing-article img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.daily-briefing-article-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.daily-briefing-article h3 {
+  color: #fff;
+  font-size: 0.95rem;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.daily-briefing-bias {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.7rem;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.compact-bias-bar {
+  width: 60px;
+  height: 5px;
+  border-radius: 3px;
+  background: #333;
+  overflow: hidden;
+  display: flex;
+}
+
+.compact-bias-left { background: #60a5fa; }
+.compact-bias-center { background: #888; }
+.compact-bias-right { background: #f87171; }
+
+.daily-briefing-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #666;
+}
+
+/* Center Column */
+.center-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.featured-story {
+  background: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #222;
+}
+
+.featured-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.featured-content {
+  padding: 25px;
+}
+
+.featured-content h2 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+}
+
+/* Simple Rectangle Bias Bar */
+.bias-bar-rectangle {
+  margin: 20px 0;
+}
+
+.bias-bar {
+  width: 100%;
+  height: 24px;
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.bias-segment {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bias-segment.left {
+  background: #60a5fa;
+}
+
+.bias-segment.center {
+  background: #888;
+}
+
+.bias-segment.right {
+  background: #f87171;
+}
+
+.bias-text {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  z-index: 2;
+}
+
+.article-content {
+  margin: 20px 0;
+}
+
+.article-content p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+.source-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.source-name {
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+.publish-date {
+  color: #666;
+}
+
+.read-full-button {
+  background: transparent;
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-full-button:hover {
+  background: #ffcc00;
+  color: #111;
+}
+
+.center-article {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #222;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.center-article:hover {
+  transform: translateY(-2px);
+  border-color: #333;
+}
+
+.center-article h3 {
+  margin: 0 0 8px 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.center-article p {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.center-article-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+/* Right Column */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+}
+
+.sidebar-section {
+  background: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.sidebar-section h3 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.bias-trends {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bias-trend-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trend-topic {
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.trend-bias {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bias-bar-mini {
+  flex: 1;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  display: flex;
+  overflow: hidden;
+}
+
+.bias-bar-mini .bias-left { background: #60a5fa; }
+.bias-bar-mini .bias-center { background: #888; }
+.bias-bar-mini .bias-right { background: #f87171; }
+
+.bias-label {
+  color: #888;
+  font-size: 0.75rem;
+  min-width: 70px;
+}
+
+.bias-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.engagement-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 8px;
+  background: #2a2a2a;
+  border-radius: 6px;
+  border: 1px solid #333;
+}
+
+.stat-number {
+  color: #ffcc00;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.stat-label {
+  color: #aaa;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.bias-rectangles {
+  display: flex;
+  gap: 6px;
+  height: 30px;
+}
+
+.bias-rectangle {
+  flex: 1;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.bias-rectangle.left {
+  background: #60a5fa;
+}
+
+.bias-rectangle.center {
+  background: #888;
+}
+
+.bias-rectangle.right {
+  background: #f87171;
+}
+
+.fact-check {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fact-statement {
+  color: #ccc;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.fact-verdict {
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.fact-verdict.true {
+  background: rgba(74, 222, 128, 0.2);
+  color: #4ade80;
+  border: 1px solid #4ade80;
+}
+
+.fact-sources {
+  color: #888;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #ffcc00;
+}
+
+.loading-spinner {
+  border: 3px solid #333;
+  border-top: 3px solid #ffcc00;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-banner {
+  background: #f87171;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-banner button {
+  background: white;
+  color: #f87171;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Full Width Separator Line */
+.full-width-separator {
+  height: 0.25px;
+  background: #fff;
+  margin: 40px auto;
+  width: 95.75%;
+}
+
+/* Local News Section - 25%/75% */
+.local-news-container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 30px;
+  padding: 0 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.local-news-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.local-news-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.local-news-description {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.city-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.city-input {
+  background: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 12px;
+  color: white;
+  font-size: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.city-input::placeholder {
+  color: #666;
+}
+
+.city-input:focus {
+  outline: none;
+  border-color: #ffcc00;
+}
+
+.submit-city-button {
+  background: #ffcc00;
+  color: #0d0d0d;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-city-button:hover {
+  background: #ffdd44;
+}
+
+/* Local News Articles */
+.local-news-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.local-news-article {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid #222;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 97%;
+}
+
+.local-news-article:hover {
+  transform: translateY(-2px);
+  border-color: #333;
+}
+
+.local-article-image {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.local-article-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.local-article-content h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.local-article-content p {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.local-article-bias {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.local-article-bias .compact-bias-bar {
+  width: 100px;
+  height: 8px;
+  border-radius: 4px;
+  background: #333;
+  overflow: hidden;
+  display: flex;
+}
+
+.bias-percentage {
+  color: #ffcc00;
+  font-weight: 600;
+  min-width: 70px;
+}
+
+.sources-count {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+/* War Room Section - 75%/25% */
+.war-room-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  gap: 30px;
+  padding: 0 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.war-room-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.war-room-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-subtitle {
+  color: #888;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* War Articles */
+.war-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.war-article {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid #222;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.war-article.featured-war-article {
+  background: #2a2a2a;
+  border-color: #ffcc00;
+}
+
+.war-article:hover {
+  transform: translateY(-2px);
+  border-color: #333;
+}
+
+.war-article-image {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.featured-war-article .war-article-image {
+  width: 300px;
+  height: 180px;
+}
+
+.war-article-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.war-article-content h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.featured-war-article .war-article-content h3 {
+  font-size: 1.4rem;
+}
+
+.war-article-content p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.war-article-bias {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.war-article-bias .compact-bias-bar {
+  width: 100px;
+  height: 8px;
+  border-radius: 4px;
+  background: #333;
+  overflow: hidden;
+  display: flex;
+}
+
+/* Lens Plus Content */
+.lens-plus-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lens-plus-item {
+  padding: 12px;
+  background: #2a2a2a;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.lens-plus-topic {
+  color: #ffcc00;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.lens-plus-description {
+  color: #ccc;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+/* Email Signup */
+.email-signup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.email-description {
+  color: #ccc;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.email-input {
+  background: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  color: white;
+  font-size: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.email-input::placeholder {
+  color: #666;
+}
+
+.email-submit-button {
+  background: #ffcc00;
+  color: #0d0d0d;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.email-submit-button:hover {
+  background: #ffdd44;
+}
+
+.war-room-right {
+  padding-right: 9.75%;
+}
+
+/* Latest Stories Section - 25%/75% */
+.latest-stories-container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 30px;
+  padding: 0 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.latest-stories-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.latest-stories-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.latest-stories-description {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+/* Similar Topics Grid */
+.similar-topics-section h3 {
+  color: #ffcc00;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.topics-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.topic-row {
+  display: flex;
+  gap: 8px;
+}
+
+.topic-item {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.topic-item:hover {
+  background: #2a2a2a;
+  border-color: #ffcc00;
+}
+
+.topic-name {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.topic-plus {
+  color: #ffcc00;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Latest Stories Articles with Images */
+.latest-stories-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.latest-story-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 97%;
+}
+
+.latest-story-item:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.latest-story-item:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom: none;
+}
+
+.latest-story-item:hover {
+  background: #2a2a2a;
+}
+
+.latest-story-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.latest-story-content h3 {
+  color: #fff;
+  font-size: 0.95rem;
+  margin: 0 0 5px 0;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.latest-story-location {
+  color: #ffcc00;
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Latest Stories Image */
+.latest-story-image {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+/* Latest Stories Bias Bar */
+.latest-story-bias-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.latest-story-bias-bar .bias-bar {
+  flex: 1;
+  height: 20px;
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.latest-story-bias-bar .bias-segment {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.latest-story-bias-bar .bias-segment.left {
+  background: #60a5fa;
+}
+
+.latest-story-bias-bar .bias-segment.center {
+  background: #888;
+}
+
+.latest-story-bias-bar .bias-segment.right {
+  background: #f87171;
+}
+
+.latest-story-bias-bar .bias-text {
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  z-index: 2;
+}
+
+.latest-story-bias-bar .sources-count {
+  color: #888;
+  font-size: 0.7rem;
+  min-width: 60px;
+  text-align: right;
+}
+
+/* Canadian Politics Section - 60%/40% */
+.canadian-politics-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 30px;
+  padding: 0 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.canadian-politics-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.canadian-politics-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.canadian-politics-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+/* Main Canadian Article */
+.main-canadian-article {
+  flex: 2;
+  background: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid #222;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.main-canadian-article:hover {
+  transform: translateY(-2px);
+  border-color: #ffcc00;
+}
+
+.main-canadian-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.main-canadian-content {
+  padding: 20px;
+}
+
+.article-title {
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.canadian-bias-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.canadian-bias-bar .bias-bar {
+  flex: 1;
+  height: 24px;
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.canadian-bias-bar .bias-segment {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.canadian-bias-bar .bias-segment.left {
+  background: #60a5fa;
+}
+
+.canadian-bias-bar .bias-segment.center {
+  background: #888;
+}
+
+.canadian-bias-bar .bias-segment.right {
+  background: #f87171;
+}
+
+.canadian-bias-bar .bias-text {
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  z-index: 2;
+}
+
+.canadian-bias-bar .sources-count {
+  color: #888;
+  font-size: 0.8rem;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* Side Canadian Articles */
+.side-canadian-articles {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.side-canadian-article {
+  background: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid #222;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.side-canadian-article:hover {
+  transform: translateY(-2px);
+  border-color: #333;
+}
+
+.side-canadian-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.side-canadian-content {
+  padding: 15px;
+}
+
+.side-canadian-content .article-title {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 12px 0;
+  color: #fff;
+}
+
+.side-canadian-content .canadian-bias-bar {
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.side-canadian-content .compact-bias-bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: #333;
+  overflow: hidden;
+  display: flex;
+}
+
+.side-canadian-content .compact-bias-left { background: #60a5fa; }
+.side-canadian-content .compact-bias-center { background: #888; }
+.side-canadian-content .compact-bias-right { background: #f87171; }
+
+.side-canadian-content .sources-count {
+  color: #888;
+  font-size: 0.75rem;
+  min-width: 60px;
+  text-align: right;
+}
+
+/* Lens+ Section */
+.lens-plus-section {
+  background: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 25px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.lens-header {
+  margin-bottom: 20px;
+}
+
+.lens-header h3 {
+  color: #ffcc00;
+  font-size: 1.2rem;
+  margin: 0 0 8px 0;
+}
+
+.lens-header p {
+  color: #888;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Under the Radar Section - Separate */
+.under-radar-section {
+  background: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 25px;
+  width: 100%;
+}
+
+.under-radar-header {
+  margin-bottom: 15px;
+}
+
+.under-radar-header h3 {
+  color: #ffcc00;
+  font-size: 1.2rem;
+  margin: 0 0 8px 0;
+}
+
+.under-radar-header p {
+  color: #888;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.under-radar-content {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 15px;
+  border: 1px solid #333;
+}
+
+.under-radar-description {
+  color: #ccc;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0 0 12px 0;
+}
+
+.under-radar-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.coverage-gap {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.local-sources {
+  color: #888;
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+.newsletter-signup p {
+  color: #ccc;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0 0 15px 0;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signup-form .email-input {
+  background: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 12px;
+  color: white;
+  font-size: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup-form .email-input::placeholder {
+  color: #666;
+}
+
+.signup-form .email-input:focus {
+  outline: none;
+  border-color: #ffcc00;
+}
+
+.subscribe-btn {
+  background: #ffcc00;
+  color: #0d0d0d;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background: #ffdd44;
+}
+
+.canadian-politics-right {
+  padding-right: 9.75%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive Design for Canadian Politics Section */
+@media (max-width: 1024px) {
+  .canadian-politics-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .canadian-politics-right {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .canadian-politics-container {
+    padding: 0 15px;
+  }
+  
+  .canadian-politics-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .main-canadian-article,
+  .side-canadian-articles {
+    width: 100%;
+  }
+  
+  .article-title {
+    font-size: 1.2rem;
+  }
+  
+  .main-canadian-image {
+    height: 180px;
+  }
+  
+  .side-canadian-image {
+    height: 100px;
+  }
+}
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .content-container {
+    grid-template-columns: minmax(0, 28%) minmax(0, 44%) minmax(0, 28%);
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content-container,
+  .local-news-container,
+  .war-room-container,
+  .latest-stories-container,
+  .canadian-politics-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .canadian-politics-right,
+  .war-room-right {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container,
+  .local-news-container,
+  .war-room-container,
+  .latest-stories-container,
+  .canadian-politics-container {
+    padding: 0 15px;
+  }
+  
+  .canadian-politics-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .main-canadian-article,
+  .side-canadian-articles {
+    width: 100%;
+  }
+  
+  .article-title {
+    font-size: 1.2rem;
+  }
+  
+  .war-article {
+    flex-direction: column;
+  }
+  
+  .war-article-image {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .featured-war-article .war-article-image {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* Latest Stories Image - Larger */
+.latest-story-image {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+/* Latest Stories Content - Adjusted spacing */
+.latest-story-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.latest-story-content h3 {
+  color: #fff;
+  font-size: 0.95rem;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.latest-story-location {
+  color: #ffcc00;
+  font-size: 0.75rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+/* Footer Container */
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Navigation Sidebar */
+.nav-sidebar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333;
+}
+
+.nav-section h4 {
+  color: #ffcc00;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.nav-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-section li {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-section li:hover {
+  color: #ffcc00;
+}
+
+/* Main Footer */
+.main-footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  position: relative;
+  align-items: start;
+}
+
+.footer-column h5 {
+  color: #ffcc00;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-column li:hover {
+  color: #ccc;
+}
+
+/* Logo Section - Positioned to the right */
+.logo-section {
+  grid-column: 6;
+  text-align: right;
+  padding-top: 0;
+}
+
+.truthlens-logo {
+  color: #ffcc00;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: 'Arial', sans-serif;
+}
+
+.logo-tagline {
+  color: #888;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 1200px) {
+  .main-footer {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  .logo-section {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 30px 15px;
+  }
+  
+  .nav-sidebar {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  .main-footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-sidebar {
+    grid-template-columns: 1fr;
+  }
+  
+  .main-footer {
+    grid-template-columns: 1fr;
+  }
+  
+  .logo-section {
+    text-align: center;
+  }
+}
